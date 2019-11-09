@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+    <h1>REPORT</h1>
+    <style>
+        body{
+            background-color: lightblue;
+            font-family: Georgia;
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+            line-height: 1.6;
+            box-sizing: content-box; 
+            margin: auto; 
+            width: 80vw;
+            padding: 70px;    
+            border: 3px solid black; 
+            background-color: beige;
+            font-size: 1.2vw;                             
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <strong><u>COMMUNITY GUIDELINES</u></strong><br><br>
+        <strong>DOs:</strong>1) Post with purpose: to inspire, enable, or share with fellow learners and guides.<br/>
+        2) Stick to the point as much as possible.<br>
+        3) Post relevant queries for the domains and try to keep them as assorted as possible.<br>
+        4) Communicate with respect with fellow users, even when they are wrong.<br>
+        <br>
+        <strong>DONTs:</strong>1) Use abusive or prude language, or intentionally try to offend others.<br/>
+        2) Post private details/personal information.<br>
+        3) Post spam.<br>
+        <br><br>
+        <form method="POST">
+            <select>
+                <option valu="question">I think a question violates community guidelines.</option>
+                <option value="user">I think a user is violating community guidelines.</option>
+                <option value="other">Other issue</option>
+            </select>
+            <input type="submit" value="REPORT" onsubmit="alert_func()"></input>
+        </form>
+    </div>
+</body>
+<script type="javascript/text">
+function alert_func()   //doesn't work for now
+{
+    alert("option");
+}
+</script>
+</html>
+
+
+    
+        
