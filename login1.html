@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            /*body{
+                background-color: lightseagreen;
+            }*/
+
+            div{
+                background-color:white;
+            }
+
+           #login{
+                display:none;
+            } 
+            input[type=text],input[type=password]{
+                width: 50%;
+                padding: 5px;
+                margin: 5px 0 22px 0;
+                border-style:solid;
+                font-size: 20px;
+                }
+
+                .button {
+                width: 50%;
+                background-color: darkslategrey;
+                padding: 15px 20px;
+                color: antiquewhite;
+                margin: 4px 0;
+                border:black;
+                cursor: pointer;
+                font-size: 20px;
+
+                .font{
+                    font-size: 40px;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+
+                .font1{
+                    font-size: 30px;
+                    font-family:'Times New Roman', Times, serif;
+                }
+                
+                .bg-img{
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+                
+                }
+                }
+
+                #div {position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-30%, -50%);
+                    width: 70%;
+                }
+}
+
+                button:hover {
+                opacity:0.8;
+}
+        </style>
+    </head>
+    <body>
+
+        <div class="bg-img" id="div">
+                <form>
+                    <!-- <button type="button" onclick="document.getElementById('login').style.display='block'">LOGIN</button>  -->
+                    <h1>Login</h1>
+              
+                  <label for="uname" class="font"><b>Username</b></label>
+                  <br>
+                  <input type="text" class="font1" placeholder="Enter Username" name="uname" required>
+                  <br>
+ 
+                  <label for="psw" class="font"><b>Password</b></label>
+                  <br>
+                  <input type="password" class="font1" placeholder="Enter Password" name="psw" required>
+              
+                  <button type="submit" class="button">LOGIN</button>
+                  <br>
+                  <br>
+
+                  <label class="font1">
+                        <input type="checkbox" name="remember"><b> Remember me</b>
+                  </label>
+                  <br>
+                  <br>
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                </form>
+              </div>
+    </body>
+</html>
