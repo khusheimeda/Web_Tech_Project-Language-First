@@ -13,10 +13,12 @@
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      background-color:lightblue;
+      color: navy;
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 450px; color: navy;}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -37,11 +39,14 @@
     #text_to_post{
       background-color: beige;
     }
+    textarea{
+        margin-bottom: 1%;
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md bg-info navbar-dark"> <!--navbar-inverse bg-info">-->
+<nav class="navbar navbar-expand-sm bg-info navbar-dark"> <!--navbar-inverse bg-info">-->
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -57,15 +62,43 @@
         <li><a href="#">MY PROFILE</a></li>
         <li><a href="#">REPORT</a></li>
         <li><a href="#">ABOUT</a></li>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+  <!--      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  SELECT LANGUAGE
+                </a>
+                <div class="dropdown-menu" data-available="en_US,fr_CA,es_MX" data-flags="true">
+                  <a class="dropdown-item glyphicon bfh-flag-US" data-toggle="bfh-selectbox" href="#">English</a>
+                  <a class="dropdown-item glyphicon bfh-flag-CA" href="#">French</a>
+                  <a class="dropdown-item glyphicon bfh-flag-MX" href="#">Spanish</a>
+                </div>
+              </li>
       </ul>
-      <li class="radio navbar-right">
+    -->
+     <!-- <div class=" bfh-languages" data-language="en_US" data-available="en_US,fr_CA,es_MX" data-flags="true">
+          <input type="hidden" name="" value="en_US">
+          <a class="bfh-selectbox-toggle form-control" role="button" data-toggle="bfh-selectbox" href="#">
+              <span class="bfh-selectbox-option">
+                  <i class="glyphicon bfh-flag-US"></i>English</span>
+                  <span class="caret selectbox-caret"></span>
+                </a><div class="bfh-selectbox-options"><div role="listbox">
+                    <ul role="option"><li><a tabindex="-1" href="#" data-option=""></a>
+                    </li><li><a tabindex="-1" href="#" data-option="en_US">
+                        <i class="glyphicon bfh-flag-US"></i>English</a></li>
+                        <li><a tabindex="-1" href="#" data-option="fr_CA">
+                            <i class="glyphicon bfh-flag-CA"></i>Français</a></li>
+                            <li><a tabindex="-1" href="#" data-option="es_MX"><i class="glyphicon bfh-flag-MX"></i>Español</a></li></ul>
+                        </div></div></div>-->
+    <li class="radio">
+        <label class="radio-inline">
+            <input type="radio" name="gr" value="0" onchange="val(this)">German</label>
+        <label class="radio-inline">
+            <input type="radio" name="gr" value="1" onchange="val(this)">French</label>
             <label class="radio-inline">
-              <input type="radio" name="gr" value="0" onchange="val(this)">German</label>
-            <label class="radio-inline">
-              <input type="radio" name="gr" value="1" onchange="val(this)">French</label>
-              <label class="radio-inline">
-              <input type="radio" name="gr" value="1" onchange="val(this)">Spanish</label>
-      </li>
+            <input type="radio" name="gr" value="1" onchange="val(this)">Spanish</label>
+    </li>
     </div>
   </div>
 </nav>
@@ -82,35 +115,34 @@
     </div>
 
     <div class="col-sm-10">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="panel panel-default text-left">
-            <div class="panel-body" id="text_to_post">
-              <textarea class="form-control" id="Textarea3" placeholder="Write Here" rows="3"></textarea>
-              <button type="button" class="btn btn-default btn-sm">Post
-              </button>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default text-left">
+                  <div class="panel-body" id="text_to_post">
+                    <form class="form-group">
+            <textarea class="form-control" id="post_textarea" placeholder="Write Here" rows="3"></textarea>
+            <button type="submit" class="btn btn-default btn-sm" style="border: wheat;">POST</button>
+                    </form>
+                    </div>
+                </div>    
             </div>
-          </div>
         </div>
-      </div>
 
-      <br><br>
-      
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>John</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="well">
+            <p>John</p>
+            <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+            </div>
         </div>
-        <div class="col-sm-9">
-          <div class="well">
+        <div class="col-sm-10" >
+            <div class="well">
             <p>Bite(Please)</p>
-          </div>
+            </div>
         </div>
-      </div>
+        </div>
     </div>
-</div>
+  </div>
 </div>
 </body>
 </html>
