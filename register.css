@@ -1,6 +1,6 @@
 <style>
 body {
-  font-family: Georgia;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: black;
 }
 
@@ -29,7 +29,30 @@ input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
+#wgtmsr{
+  width: 300px;
+  height: 30px;
+}
 
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-weight: 550;
+  font-family: Arial, Helvetica, sans-serif; 
+  margin: 0; 
+}
 
 
 .registerbtn {

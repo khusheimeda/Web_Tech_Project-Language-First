@@ -6,7 +6,7 @@
 </head>
 <body>
 <title>Registration</title>
-<link rel="stylesheet" type="text/css" href="register.css">
+<link rel="stylesheet" href="register.css">
 
 <form action="/action_page.php">
   <div class="container">
@@ -28,17 +28,39 @@
     <label for="city"><b>City</b></label>
     <input type="text" placeholder="Enter City" name="city" required><br />
 
-    <label for="language"><b>Language</b></label>
-    <input type="text" placeholder="Enter Proficient Language" name="language" required>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+    <div class="dropdown">
+        <button class="dropbtn">Proficient Language
 
-    <label for="Username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required><br />
+    <select name="wgtmsr" id="wgtmsr" multiple="4">
+    <option value="German">English</option>
+    <option value="English">German</option>
+    <option value="Spanish">Spanish</option>
+    <option value="French">French</option>
+    </select>
+    </div>
+
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="Username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    
+    <div class="dropdown">
+        <button class="dropbtn">Currently Learning
+
+    <select name="wgtmsr" id="wgtmsr" multiple="4">
+    <option value="German">German</option>
+    <option value="English">English</option>
+    <option value="Spanish">Spanish</option>
+    <option value="French">French</option>
+    </select>
+    </div><br/>
+    
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <label for="psw-repeat"><b>Confirm Password</b></label>
-    <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+    
     <hr>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
