@@ -13,16 +13,10 @@
             flex-direction: column;
             width: 100%;
             height: 100%;
-}
-
-        .row1{
-            flex:1;
-            height: 100vh;
         }
-        .row2{
+        .row{
             flex:1;
             height: 100vh;
-            clear:both;position:fixed;bottom:0;height:100%;width:100%;
         }
         body{
             background: url("w5.jpg") no-repeat center center fixed; 
@@ -35,7 +29,7 @@
         }
         .content {
                     text-align: center;
-                    position: fixed;
+                    position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%,-50%);
@@ -91,6 +85,8 @@
 
         .button1:after {
         content: '»';
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
         position: absolute;
         opacity: 0;  
         top: 14px;
@@ -108,6 +104,12 @@
         right: 10px;
         }
 
+        #about_heading{
+            text-align: center;
+            font-family: Geogia;
+            font-size: 3vw;
+        }
+
         #about_contents{
             text-align:left;
             color:black;
@@ -118,6 +120,7 @@
             height: 29vw;
             padding: 30px;  
             border: 3px solid black;
+            border-radius: 20px;
             font-size: 1.3vw;
             font-family: Georgia;
             line-height: 200%;                                                                                                                                                                                                        
@@ -126,16 +129,18 @@
 </head>
 <body>
 <div class="fullheight">
-      <div class="row1">
+      <div class="row">
         <div class="content">Welcome to Language First!<br/><br/>
         <button type="button" class="button" style="top: 80%;left: 95%;" onclick="alert('Login')">Login</button><br>
         <button type="button" class="button" style="top: 80%;right: 95%;" onclick="alert('Signup')">Sign up</button><br>
-        <button type="button" class="button1" onclick="window.location='#about_contents'">Learn More</button><br>
+        <button type="button" class="button1" onclick="window.location='#about'">Learn More</button><br>
         </div>
       </div>
 
 
-      <div class="row1"><div id="about_contents">
+      <div class="row" id="about">
+            <p id="about_heading">ABOUT</p>
+        <div id="about_contents">
             <p>This website is to help you learn and improve your language skills.
                 It's specially focused on improving your writing, grammar and diction.</p>
             <strong>How it works</strong><br>
@@ -146,6 +151,7 @@
         5. You get points for every query asked and answered and you can check out your cumulative score in your profile. <br>
         <p><strong>Have fun learning and remember, Language First!</strong></p>
         NOTE: It's currently available only for German, French and Spanish.
+      </div>
       </div>
       </div>
 
