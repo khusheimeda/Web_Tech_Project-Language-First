@@ -9,11 +9,17 @@
 
 <?php
 
-$con=mysqli_connect("localhost","username","password","table_name");
+define('DB_SERVER', 'localhost');
+//define('DB_USERNAME', 'root');
+//define('DB_PASSWORD', 'root123');
+define('DB_DATABASE', 'lang_first_db'); 
+$con = mysqli_connect(DB_SERVER,'root','',DB_DATABASE);
 
 if(!$con)
   echo "Failed to connect";
 
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
 $name = mysqli_real_escape_string($con, $_POST['name']);
 $age = mysqli_real_escape_string($con, $_POST['age']);
 $email = mysqli_real_escape_string($con, $_POST['email']);
@@ -21,8 +27,24 @@ $pro_language = mysqli_real_escape_string($con, $_POST['pro_language']);
 $curr_language = mysqli_real_escape_string($con, $_POST['curr_language']);
 $username = mysqli_real_escape_string($con, $_POST['username']);
 $psw = mysqli_real_escape_string($con, $_POST['psw']);
-  
-$query = "INSERT INTO requests (name, age, email, pro_language, curr_language, username, psw) VALUES ('$name', '$age','$email', '$pro_language', '$curr_language', '$username', '$psw')";
+$encryptPassword = password_hash($psw, PASSWORD_DEFAULT);
+}
+
+$stmt = $con->prepare("INSERT INTO PROFILE(Name, Age, Email, Proficient Language, Current Language, Username, Password) VALUES(?, ?, ?, ?, ?, ?, ?)"); //Fetching all the records with input credentials
+$stmt->bind_param("sisssss", $name, $age, $email, $pro_language, $curr_language, $username, $encryptPassword); //Where s indicates string type. You can use i-integer, d-double
+$stmt->execute();
+$result = $stmt->affected_rows;
+$stmt -> close();
+$db -> close(); 
+
+if($result > 0)
+{
+header("location: RegSuccess.php"); // user will be taken to the success page
+}
+else
+{
+echo "Oops. Something went wrong. Please try again";}
+
 ?>
 
 <div class="container">
