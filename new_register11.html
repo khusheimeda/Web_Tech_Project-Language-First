@@ -1,0 +1,57 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="register1.css">
+</head>
+<body>
+    <div class="container">
+    <form method="POST" action="register.php">
+    <h1 align="center"> Sign Up</h1> 
+    <table id="table1"; cellspacing="5px" border-spacing:8px 2px cellpadding=6px; align="center" margin-left:auto; margin-right:auto>  
+       <tr>  
+       <td  align="right"><label for="name"><b>Name</b></label></td>  <td><input type="text" placeholder="Full name" name="fname" maxlength="25" size="50px"style="width:70%" required></td>
+       <td  align="right"><label for="age"><b>Age</b></label></td>    <td><input type="text"  style="width:150%" placeholder="Enter Age" size="50px" name="age" required></td>
+       </tr>
+
+       <tr>
+       <td  align="right"><label for="email"><b>Email</b></label></td>  <td><input type="text" style="width:70%" placeholder="Enter Email" name="email" maxlength="50" size="60" required></td>
+       <td  align="right" width:100% ><label for="language"><b>Language proficient in</b></label>   <td><select multiple> 
+      <option value="English" selected>English</option>
+      <option value="German">German</option>
+      <option value="French">French</option>
+      <option value="Spanish">Spanish</option>
+      </select></td>
+       </tr>
+
+       <tr>
+        <td  align="left"><label for="language"><b>Language learning</b></label></td>   <td><select multiple>
+            <option value="German">German</option>
+            <option value="French">French</option>
+            <option value="Spanish">Spanish</option>
+          </select></td> 
+        <td  align="right"><label for="Username"><b>Username</b></label></td>   <td><input type="text" style="width:150%" placeholder="Enter Username" name="username" maxlength="20" required></td>
+       </tr>
+
+       <tr>
+        <td  align="right"><label for="psw"><b>Password</b></label></td>    <td><input type="password" style="width:70%" placeholder="Enter Password" name="psw" maxlength="20" required></td>
+        <td  align="right"><label for="psw-repeat"><b>Confirm Password</b></label></td> <td><input type="password" style="width:150%" placeholder="Confirm Password" name="psw-repeat" maxlength="20" required></td>
+    </tr>
+    </table><br/>
+
+    &emsp;&emsp;&emsp;<button type="submit" class="registerbtn">Register</button><br/>
+
+    <br/><br/><br/><p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    </form>
+    
+    <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a></p>
+    </div>
+    
+    </div>
+</body>
+
+        
