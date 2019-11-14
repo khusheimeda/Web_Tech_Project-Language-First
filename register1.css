@@ -18,7 +18,7 @@ table{
   margin-left: auto;
   margin-right: auto;
   
- background: url("w5.jpg") no-repeat center center fixed; 
+ background: url(https://tse2.mm.bing.net/th?id=OIP.qDeWWaKoT79hiF-mG9uiQAHaFj&pid=Api&P=0&w=219&h=165) no-repeat center center fixed; 
  -webkit-background-size: cover;
                -moz-background-size: cover;
                -o-background-size: cover;
@@ -72,6 +72,7 @@ input[type=text]:focus, input[type=password]:focus {
   align-items: center;
   justify-content: center;
   width: 30%;
+  position:absolute;
   text-align: center;
   opacity: 0.9;
 }
