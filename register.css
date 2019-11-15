@@ -4,15 +4,26 @@ body {
   background-color: black;
 }
 
+table{
+  margin:25px 0 0 25px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 
 .container {
-  padding: 16px;
-  padding-left: 10px;
-  background-color:lightblue;
+  padding: 12px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  
+ background: url(https://tse2.mm.bing.net/th?id=OIP.qDeWWaKoT79hiF-mG9uiQAHaFj&pid=Api&P=0&w=219&h=165) no-repeat center center fixed; 
+ -webkit-background-size: cover;
+               -moz-background-size: cover;
+               -o-background-size: cover;
+                background-size: cover;
+            font-family: Georgia;
 }
 
 
@@ -28,10 +39,6 @@ input[type=text], input[type=password] {
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
-}
-#wgtmsr{
-  width: 300px;
-  height: 30px;
 }
 
 
@@ -65,6 +72,7 @@ input[type=text]:focus, input[type=password]:focus {
   align-items: center;
   justify-content: center;
   width: 30%;
+  position:absolute;
   text-align: center;
   opacity: 0.9;
 }
@@ -75,7 +83,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 
 a {
-  color: dodgerblue;
+  color: red;
 }
 
 

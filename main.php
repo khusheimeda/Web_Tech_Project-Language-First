@@ -45,7 +45,6 @@
   </style>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-sm bg-info navbar-dark"> <!--navbar-inverse bg-info">-->
   <div class="container-fluid">
     <div class="navbar-header">
