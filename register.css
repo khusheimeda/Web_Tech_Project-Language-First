@@ -18,7 +18,7 @@ table{
   margin-left: auto;
   margin-right: auto;
   
- background: url(https://tse2.mm.bing.net/th?id=OIP.qDeWWaKoT79hiF-mG9uiQAHaFj&pid=Api&P=0&w=219&h=165) no-repeat center center fixed; 
+ background: url("img/register_background.jpg") no-repeat center center fixed; 
  -webkit-background-size: cover;
                -moz-background-size: cover;
                -o-background-size: cover;
@@ -62,7 +62,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 
-.registerbtn {
+.registerbtn1 {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -77,7 +77,7 @@ input[type=text]:focus, input[type=password]:focus {
   opacity: 0.9;
 }
 
-.registerbtn:hover {
+.registerbtn1:hover {
   opacity: 1;
 }
 
