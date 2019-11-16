@@ -65,15 +65,15 @@ if (count($errors) == 0) {
   $query = "INSERT INTO lang_first_tb(FullName, Age, Email, Proficient_Language, Current_Language, Username, Enc_Password) VALUES('$name', '$age', '$email', '$pro_language', '$curr_language', '$username', '$password')";
   mysqli_query($db, $query);
   $_SESSION['username'] = $username;
-  $_SESSION['success'] = "You are now logged in";
+  $_SESSION['success'] = "You are now registered";
   echo "Success";
-  header('refresh:5; url=login.html');
+  header('refresh:2; url=login.html');
 }
 else
 {
   foreach($errors as $x)
   echo $x;
-  header('refresh:5; url=register.html');
+  header('refresh:2; url=register.html');
 }
 
 ?>
