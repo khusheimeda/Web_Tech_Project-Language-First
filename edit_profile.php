@@ -7,7 +7,6 @@
 </head>
 
 <body>
-
 <?php
 session_start();
 $db = mysqli_connect('localhost', 'root', '', 'lang_first_db');
@@ -21,69 +20,58 @@ if (isset($_SESSION['Username'])) {
     $email = $row['Email'];
     $pro_language = $row['Proficient_Language'];
     $curr_language = $row['Current_Language'];
-
-    if (is_dir('uploads/')){
-        if ($dh = opendir('uploads/')){
-          while (($file = readdir($dh)) !== false){
-              if(strpos($file, $username) !== false)
-                $target_file = 'uploads/'.$file;
-          }
-        }
-    }
 }
 else {
     header('refresh:5; url=welcome_and_about.html');
 }
 ?>
 
-<form>
-<table>
-<img style="margin-left:5px;" src="<?php echo $target_file ?>" width="200" height="200" />
-</table>
-</form>
+<form method="POST" action="upload_and_edit.php" enctype="multipart/form-data">>
+
+<!--<img style="margin-left:5px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbAGxAhFwWC1FqBA4OEuNVttlb4y8xvN1Lf2uq07HVD9sc1f9" width="200" height="200" />-->
+Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+
 <fieldset>
 <h2>My Profile</color></h2>
 	&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	<label><b>Name</b></label><div>
-    <?php echo $name ?>
-    </div>
+	<label><b>Name</b></label><textarea name="fname" required><?php echo $name ?>
+    </textarea>
     <br/>
 
     <br/>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	<label><b>Age</b></label><div>
+	<label><b>Age</b></label><textarea name="age" required>
     <?php echo $age ?>
-    </div>
+    </textarea>
     <br/>
 
     <br/>&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-    <label><b>Email</b></label><div>
+    <label><b>Email</b></label><textarea name="email" required>
     <?php echo $email ?>
-    </div>
+    </textarea>
     <br/>
     
-    <br/><label><b>Language currently Learning</b></label><div>
-    <?php echo $curr_language ?>
-    </div>
+    <br/><label><b>Language currently Learning</b></label><select multiple name="curr_language[]" required>
+        <option value="German">German</option>
+        <option value="French">French</option>
+        <option value="Spanish">Spanish</option>
+      </select>
     <br/>
 
     <br/>&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;
-    <label><b>Proficient Language</b></label><div>
-    <?php echo $curr_language ?>
-    </div>
+    <label><b>Proficient Language</b></label><select multiple name="pro_language[]" required>
+  <option value="English" selected>English</option>
+  <option value="German">German</option>
+  <option value="French">French</option>
+  <option value="Spanish">Spanish</option>
+  </select>
     <br/>
 
-    <button type="button" class="editbtn" onclick="window.location='edit_profile.php'">Edit</button><br/>
+    <input type="submit" class="editbtn" value="save" name="submit">Save</button><br/>
 
     <br/><button type="button" class="questions">Asked Questions</button><br/>
 
-    <br/><button type="button" class="questions">Tagged Questions</button><br/>
-
-   <br/> <button type="button" class="questions">Bookmarked Questions</button>
-
-
-
+</form>
 </fieldset>
 
 </body>
-
-   
