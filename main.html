@@ -45,6 +45,9 @@
   </style>
 </head>
 <body>
+  <? php
+  $_SESSION['Username'] = $username;
+  ?>
     </h3>
   </div>
 
@@ -61,11 +64,11 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#sideoptions" id="domains" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">DOMAINS</a></li>
-        <li><a href="profile page.html" target="_blank">MY PROFILE</a></li>
+        <li><a href="profile page.php" target="_blank">MY PROFILE</a></li>
         <li><a href="report.html" target="_blank">REPORT</a></li>
         <li><a href="welcome_and_about.html#about" target="_blank">ABOUT</a></li>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
         </ul>
   <!--      <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

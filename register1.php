@@ -65,7 +65,7 @@ if (count($errors) == 0) {
 
   $query = "INSERT INTO lang_first_tb(FullName, Age, Email, Proficient_Language, Current_Language, Username, Enc_Password) VALUES('$name', '$age', '$email', '$pro_language', '$curr_language', '$username', '$password')";
   mysqli_query($db, $query);
-  $_SESSION['username'] = $username;
+  $_SESSION['Username'] = $username;
   $_SESSION['success'] = "You are now registered";
   echo "Success";
   header('refresh:2; url=login.html');

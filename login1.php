@@ -12,7 +12,6 @@ if (isset($_POST['login_btn']))
     $username = mysqli_real_escape_string($db, $_POST['uname']);
     $pswd = mysqli_real_escape_string($db, $_POST['pswd']);
     $enc_password = md5($pswd);
-    //$enc_password = password_hash($pswd, PASSWORD_DEFAULT);
     $errors= array();
 }
 
@@ -24,6 +23,7 @@ $user = mysqli_fetch_assoc($result);
 
 if ($user && count($errors) == 0) { 
     if((strcasecmp($user['Username'], $username) === 0) && strpos($enc_password, $user['Enc_Password']) !== false){
+        $_SESSION['Username'] = $username;
         header('refresh:1; url=main.html');
     }
     else

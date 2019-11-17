@@ -9,16 +9,23 @@
 <body>
 
 <?php
-require_once('register1.php');
-$username=$_SESSION['Username'];
-$result = mysql_query("SELECT * FROM lang_first_tb where UserId='$uid'");
-$row = mysql_fetch_array($result);
-$name = $row['FullName'];
-$age=$row['Age'];
-$email = $row['Email'];
-$pro_language = $row['Proficient_Language'];
-$curr_language = $row['Current_Language'];
-
+//require_once('login1.php');
+session_start();
+$db = mysqli_connect('localhost', 'root', '', 'lang_first_db');
+if (isset($_SESSION['Username'])) {
+    $username=$_SESSION['Username'];
+    $user_check_query = "SELECT * FROM lang_first_tb WHERE Username='$username' LIMIT 1";
+    $result = mysqli_query($db, $user_check_query);
+    $row = mysqli_fetch_assoc($result);
+    $name = $row['FullName'];
+    $age=$row['Age'];
+    $email = $row['Email'];
+    $pro_language = $row['Proficient_Language'];
+    $curr_language = $row['Current_Language'];
+}
+else {
+    header('refresh:5; url=welcome_and_about.html');
+}
 ?>
 
 
@@ -33,28 +40,18 @@ $curr_language = $row['Current_Language'];
     <br/>
 
     <br/>&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	<label for="age"><b>Age</b></label><?php echo $age>
+	<label for="age"><b>Age</b></label><?php echo $age ?>
     <br/>
 
     <br/>&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-    <label for="email"><b>Email</b></label><?php echo $email>
+    <label for="email"><b>Email</b></label><?php echo $email ?>
     <br/>
     
-    <br/><label for="language"><b>Language currently Learning</b></label><?php
-    foreach($curr_language as $x)
-    {
-        echo $x.", ";
-    }
-    ?>
+    <br/><label for="language"><b>Language currently Learning</b></label><?php echo $curr_language ?>
     <br/>
 
     <br/>&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;
-    <label for="language"><b>Proficient Language</b></label><?php
-    foreach($pro_language as $x)
-    {
-        echo $x.", ";
-    }
-    ?>
+    <label for="language"><b>Proficient Language</b></label><?php echo $curr_language ?>
     <br/>
 
     <button type="button" class="editbtn">Edit</button><br/>
