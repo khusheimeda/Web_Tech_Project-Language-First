@@ -46,13 +46,13 @@ if($uploadOk ==1)
 {
     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     && $imageFileType != "gif" ) {
-        echo "\nSorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        echo "<br/>"."Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     } 
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "\nSorry, your file was not uploaded.";
+    echo "<br/>"."Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -63,12 +63,12 @@ if ($uploadOk == 0) {
         rename($target_file, 'uploads/'.$dp);
         } 
      else {
-        echo "\nSorry, there was an error uploading your file.";
+        echo "<br/>"."Sorry, there was an error uploading your file.";
     }
 }
 if (isset($_SESSION['Username']))
 {
-    echo "\nDetails updated successfully.";
+    echo "<br/>"."Details updated successfully.";
     $sql  = "UPDATE lang_first_tb SET FullName='$name', Age='$age', Email='$email', Proficient_Language='$pro_language', Current_Language='$curr_language' WHERE Username='$username' ";
     mysqli_query($db, $sql);
 }

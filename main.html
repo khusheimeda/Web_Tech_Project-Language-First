@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -118,7 +119,7 @@
 </nav>
   
 <div  class="nav collapse" id="submenu1" role="menu" aria-labelledby="domains">    
-  <div class="row content">
+  <div class="row content" id="outermost_row">
     <div class="col-sm-2 sidenav">
       <p><a id="basic_grammar" data-toggle="collapse" data-target="#query_section" aria-expanded="false">Basic Grammar</a></p>
       <p><a href="#">Introduction and Greetings</a></p>
@@ -132,24 +133,24 @@
           <div class="col-sm-12">
               <div class="panel panel-default text-left">
                 <div class="panel-body" id="text_to_post">
-                  <form class="form-group">
+                  <form class="form-group" method="POST">
           <textarea class="form-control" id="post_textarea" placeholder="Write Here" rows="3"></textarea>
-          <button type="submit" class="btn btn-default btn-sm" style="border: wheat;">POST</button>
+          <input type="button" class="btn btn-default btn-sm" style="border: wheat;" id="btnpost"  >POST
                   </form>
                   </div>
               </div>    
           </div>
       </div>
 
-  <div class="row">
+ <!-- <div class="row">
       <div class="col-sm-2">
-          <div class="well">
+          <div class="well"> 
           <p>John</p>
           <img src="g1.gif" class="img-circle" height="35" width="35" alt="Avatar">
           </div>
       </div>
       <div class="col-sm-10" >
-          <div class="well">
+          <div class="well"> 
           <p style="color: black;">Bite(Please)</p>
           <div class="row">
             <div class="col-sm-2">
@@ -167,9 +168,68 @@
       </div>
       </div>
   </div>
-  </div>
+-->
+</div> 
 </div>
 </div>
   
+<!--<script>
+  var btn = document.getElementById("btnpost");
+  btn.addEventListener("click", create_query, false);
+  function create_query(e){
+    console.log(e);
+    var d1 = document.createElement("div");
+    d1.class = "row";
+    var d2= document.createElement("div");
+    d2.class = "col-sm-2";
+    var d3= document.createElement("div");
+    d3.class = "well";
+    var p1 = document.createElement("p");
+    p1.textContent = "John";
+    var img1 = document.createElement("img");
+    img1.setAttribute("src", "g1.gif");
+    img1.setAttribute("class", "img-circle");
+    img1.setAttribute("height", "35");
+    img1.setAttribute("width","35");
+    d3.appendChild(p1);
+    d3.appendChild(img1);
+    d2.appendChild(d3);
+    d1.appendChild(d2);
+    var d4= document.createElement("div");
+    d4.class = "col-sm-10";
+    var d5= document.createElement("div");
+    d5.class = "well";
+    var p2 = document.createElement("p");
+    p2.textContent = "Bite(Please)";
+    p2.setAttribute("style","color:black;");
+    var d6 = document.createElement("div");
+    d6.class = "row";
+    var d7= document.createElement("div");
+    d7.class = "col-sm-2";
+    var d8= document.createElement("div");
+    d8.class = "well";
+    var p3 = document.createElement("p");
+    p3.textContent = "Shawn";
+    d8.appendChild(p3);
+    d7.appendChild(d8);
+    d6.appendChild(d7);
+    d5.appendChild(p2);
+    d5.appendChild(d6);
+    d4.appendChild(d5);
+    var d9 = document.getElementById("outermost_row");
+    d9.appendChild(d1);
+    var d10 = document.createElement("div");
+    d10.class = "col-sm-10";
+    var d11= document.createElement("div");
+    d11.class = "well";
+    var p4 = document.createElement("p");
+    p4.textContent = "Bitte*";
+    d11.appendChild(p4);
+    d10.appendChild(d11);
+    d6.appendChild(d10);
+    console.log(d1);
+  }
+</script>
+-->
 </body>
 </html>
