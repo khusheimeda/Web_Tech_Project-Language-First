@@ -11,14 +11,21 @@ body {
 * {
   box-sizing: border-box;
 }*/
-
-
+form p label abbr {
+  border: none;
+  font-weight: bold;
+  color: #f00;
+}
+input[area-invalid="true"], textarea[area-invalid="true"] {
+  border: 1px solid #f00;
+  box-shadow: 0 0 4px 0 #f00;
+}
 .container {
   padding: 12px 20px;
   margin-left: auto;
   margin-right: auto;
   
- background: url("w5.jpg") no-repeat center center fixed; 
+ background: url("register_background.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -75,6 +82,7 @@ input[type=text]:focus, input[type=password]:focus {
   position:absolute;
   text-align: center;
   opacity: 0.9;
+  float:center;
 }
 
 .registerbtn1:hover {

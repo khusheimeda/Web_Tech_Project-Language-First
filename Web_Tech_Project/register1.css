@@ -4,13 +4,13 @@ body {
   background-color: black;
 }
 
-/*table{
+table{
   margin:25px 0 0 25px;
 }
 
 * {
   box-sizing: border-box;
-}*/
+}
 
 
 .container {
@@ -18,17 +18,17 @@ body {
   margin-left: auto;
   margin-right: auto;
   
- background: url("w5.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: Georgia;
+ background: url(https://tse2.mm.bing.net/th?id=OIP.8GcJVkinxxyakxAWWFj_4wHaEo&pid=Api&P=0&w=273&h=171) no-repeat center center fixed; 
+ -webkit-background-size: cover;
+               -moz-background-size: cover;
+               -o-background-size: cover;
+                background-size: cover;
+            font-family: Georgia;
 }
 
 
 input[type=text], input[type=password] {
-  width: 7.2vw;
+  width: 35%;
   padding: 15px;
   margin: 5px 0 12px 0;
   display: inline-block;
@@ -62,7 +62,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 
-.registerbtn1 {
+.registerbtn {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -71,13 +71,13 @@ input[type=text]:focus, input[type=password]:focus {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  width: 7vw;
+  width: 30%;
   position:absolute;
   text-align: center;
   opacity: 0.9;
 }
 
-.registerbtn1:hover {
+.registerbtn:hover {
   opacity: 1;
 }
 

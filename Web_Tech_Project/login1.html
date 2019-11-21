@@ -14,23 +14,6 @@
             /* div{
                 background-color:white;
             } */
-            .container{
-              position:absolute;
-              margin:20px;
-              width:auto;
-            }
-            .topnav{
-              overflow:hidden;
-              background-color: black;
-            }
-            .topnav a{
-              float:left;
-              color:white;
-              text-align:center;
-              padding:14px 16px;
-              text-decoration: none;
-              font-size:17px;
-            }
 
            #login{
                 display:none;
@@ -78,35 +61,30 @@
                     transform: translate(-30%, -50%);
                     width: 70%;
                 }
+}
 
                 button:hover {
                 opacity:0.8;
-                }
+}
         </style>
     </head>
     <body>
-      <div class="container">
-        <div class="topnav">
-          <a onclick="location.href='about.html'">About</a>
-          <a onclick="location.href='register.html' ">Register</a>
-        </div>
-      </div>
 
         <div class="bg-img" id="div">
-                <form method="POST" action="login1.php">
+                <form>
                     <!-- <button type="button" onclick="document.getElementById('login').style.display='block'">LOGIN</button>  -->
                     <h1>Login</h1>
               
-                  <label class="font"><b>Username</b></label>
+                  <label for="uname" class="font"><b>Username</b></label>
                   <br>
                   <input type="text" class="font1" placeholder="Enter Username" name="uname" required>
                   <br>
  
-                  <label class="font"><b>Password</b></label>
+                  <label for="psw" class="font"><b>Password</b></label>
                   <br>
-                  <input type="password" class="font1" placeholder="Enter Password" name="pswd" required>
+                  <input type="password" class="font1" placeholder="Enter Password" name="psw" required>
               
-                  <button type="submit" class="button" name="login_btn">LOGIN</button>
+                  <button type="submit" class="button">LOGIN</button>
                   <br>
                   <br>
 
