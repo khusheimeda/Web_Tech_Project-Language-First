@@ -1,4 +1,27 @@
-  window.onload = function(){
+function text_query()
+{
+  var txt = document.getElementsByTagName("textarea")[0];
+  txt.addEventListener("input", get_text, false);
+}
+var a;
+    
+function get_text()
+{
+  a = document.getElementsByTagName("textarea")[0].value;
+  console.log(a);
+}
+var ans;
+function reply()
+{
+  ans = window.prompt("Enter reply");
+  document.getElementById("re").textContent = ans;
+}
+function delete1()
+{
+  document.getElementById("re").textContent = " ";
+}
+window.onload = function(){
+    
     var btn = document.getElementById("btnpost");
     console.log(btn);
   //   debugger;
@@ -23,11 +46,11 @@
       d2.appendChild(d3);
       d1.appendChild(d2);
       var d4= document.createElement("div");
-      d4.setAttribute("class","col-sm-6");
+      d4.setAttribute("class","col-sm-8");
       var d5= document.createElement("div");
       d5.setAttribute("class","well");
       var p2 = document.createElement("p");
-      p2.textContent = "Bite(Please)";
+      p2.textContent = a;
       p2.setAttribute("style","color:black;");
       var d6 = document.createElement("div");
       d6.setAttribute("class","row");
@@ -51,10 +74,26 @@
       var d11= document.createElement("div");
       d11.setAttribute("class","well");
       var p4 = document.createElement("p");
+      p4.setAttribute("id", "re");
       p4.textContent = "Bitte*";
       d11.appendChild(p4);
       d10.appendChild(d11);
       d6.appendChild(d10);
+      var b1= document.createElement("input");
+      b1.value="REPLY";
+      b1.type="button";
+      b1.id="com1";
+      d2.appendChild(b1);
+      var b2= document.createElement("input");
+      b2.value="DELETE";
+      b2.type="button";
+      b2.id="com2";
+      d2.appendChild(b2);
+      b1.setAttribute("onClick","reply()");
+			b2.setAttribute("onClick","delete1()");
+
+      var dx = document.getElementById("query_section");
+      dx.appendChild(d1);
       console.log(d1);
     }
   
