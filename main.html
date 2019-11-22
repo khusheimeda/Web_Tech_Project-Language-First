@@ -29,7 +29,7 @@
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) {  //other media type is print
       .sidenav {
         height: auto;
         padding: 15px;
@@ -108,11 +108,11 @@
                         </div></div></div>-->
     <li class="radio">
         <label class="radio-inline">
-            <input type="radio" name="gr" value="0" checked="checked" onchange="val(this)">German</label>
+            <input type="radio" value="0" checked="checked" onchange="val(this)">German</label>
         <label class="radio-inline">
-            <input type="radio" name="gr" value="1" onchange="val(this)">French</label>
+            <input type="radio" value="1" onchange="val(this)">French</label>
             <label class="radio-inline">
-            <input type="radio" name="gr" value="1" onchange="val(this)">Spanish</label>
+            <input type="radio" value="1" onchange="val(this)">Spanish</label>
     </li>
     </div>
   </div>
@@ -131,9 +131,9 @@
     <div class="col-sm-10 collapse" id="query_section" aria-labelledby="basic_grammar">
       <div class="row">
           <div class="col-sm-12">
-              <div class="panel panel-default text-left">
+              <div class="panel panel-default text-left"> //panel is bordered box with padding around its content
                 <div class="panel-body" id="text_to_post">
-                  <form class="form-group" method="POST">
+                  <form class="form-group" method="POST"> //manage the css and alignment of the form
           <textarea class="form-control" id="post_textarea" placeholder="Write Here" rows="3" onclick="text_query()"></textarea>
           <button type="button" class="btn btn-default btn-sm" style="border: wheat; height: 7vh; width: 5vw;" id="btnpost" >POST
                   </form>
