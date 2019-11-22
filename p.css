@@ -16,7 +16,11 @@ background-color: white;
 }
 
 body {
-background: lightblue;
+background: url("g5.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
@@ -49,9 +53,9 @@ input[type=text], input[type=password] {
 }
 
 .questions{
-	margin-left: 300px;
-	padding: 10px 10px;
-	width: 30%;
+  margin-left: 300px;
+  padding: 10px 10px;
+  width: 30%;
 
 }
 
